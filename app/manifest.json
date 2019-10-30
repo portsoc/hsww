@@ -1,0 +1,23 @@
+{
+  "name": "Hello Service Worker World",
+  "short_name": "HSWW",
+  "icons": [{
+      "src": "./img/512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "maskable"
+    },
+    {
+      "src": "./img/192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "maskable"
+    }
+  ],
+  "display": "standalone",
+  "start_url": "./index.html",
+  "background_color": "#FFF",
+  "scope": "./",
+  "theme_color": "#00a0ff",
+  "prefer_related_applications": false
+}
