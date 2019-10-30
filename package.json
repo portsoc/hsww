@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "A minimal installable service worker app",
   "scripts": {
-    "test": "http-server app"
+    "test": "http-server docs"
   },
   "author": "Rich Boakes <rich@boakes.org>",
   "contributors": [
