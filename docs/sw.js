@@ -1,4 +1,4 @@
-const CACHE = 'hssw';
+const CACHE = 'hsww';
 const cacheable = [
   './',
   './index.html',

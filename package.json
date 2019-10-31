@@ -13,7 +13,9 @@
   ],
   "license": "ISC",
   "devDependencies": {
-    "http-server": "^0.11.1",
     "semistandard": "^14.1.0"
+  },
+  "dependencies": {
+    "http-server": "^0.11.1"
   }
 }
