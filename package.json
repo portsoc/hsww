@@ -1,11 +1,11 @@
 {
   "name": "hello-service-worker-world",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A minimal installable service worker app",
   "scripts": {
     "test": "http-server docs"
   },
-  "author": "Rich Boakes <rich@boakes.org>",
+  "author": "SoftEng <softeng@port.ac.uk>",
   "contributors": [
     "Rich Boakes <rich@boakes.org>",
     "Jacek Kopecký <jacek@jacek.cz>",
