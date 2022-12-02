@@ -16,13 +16,12 @@ const CACHEABLE = [
 ];
 
 /* Prepare and populate a cache. */
-async function prepareCache(evt) {
+async function prepareCache() {
   const c = await caches.open(CACHE);
   await c.addAll(CACHEABLE);
-  console.log("Cache prepared.")
+  console.log('Cache prepared.');
 }
 
 // install the event listener so it can run in the background.
 self.addEventListener('install', prepareCache);
 self.addEventListener('fetch', interceptFetch);
-
