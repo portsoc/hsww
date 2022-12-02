@@ -13,9 +13,15 @@
   ],
   "license": "ISC",
   "devDependencies": {
-    "semistandard": "^14.1.0"
+    "eslint": "^7.21.0",
+    "eslint-config-portsoc": "^0.8.1",
+    "http-server": "^14.1.1"
   },
-  "dependencies": {
-    "http-server": "^0.11.1"
+  "eslintConfig": {
+    "extends": "portsoc",
+    "root": true,
+    "env": {
+      "browser": true
+    }
   }
 }
