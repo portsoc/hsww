@@ -1,7 +1,7 @@
 :root {
-  --maincol: #336699;
+  --purple: #purple;
 }
 
 h1 {
-  color: var(--maincol);
+  color: var(--purple);
 }
