@@ -1,5 +1,3 @@
-'use strict';
-
 async function init() {
   const message = await fetch('message.txt');
   const messageText = await message.text();

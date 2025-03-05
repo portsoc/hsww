@@ -1,5 +1,3 @@
-'use strict';
-
 async function init() {
   console.log('js ready');
   console.log('fetching message');
