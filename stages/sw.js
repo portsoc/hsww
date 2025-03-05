@@ -1,11 +1,14 @@
 /* Log fetch requests and then serve them from the cache */
-async function interceptFetch(evt) {
+function interceptFetch(evt) {
+  evt.respondWith(handleFetch(evt.request));
+}
+
+/* Retrieve a requested resource from the cache
+ * or return a resolved promise if its not there.
+ */
+async function handleFetch(request) {
   const c = await caches.open(CACHE);
-  const cachedCopy = await c.match(evt.request);
-  if (cachedCopy) {
-    const fn = evt.request.url.split('/').pop();
-    console.log(`Serving ${fn} from cache.`);
-  }
+  const cachedCopy = await c.match(request);
   return cachedCopy || Promise.reject(new Error('no-match'));
 }
 
