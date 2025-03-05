@@ -1,6 +1,7 @@
 /* Log fetch requests and then serve them from the cache */
 function interceptFetch(evt) {
   evt.respondWith(handleFetch(evt.request));
+  evt.waitUntil(updateCache(evt.request));
 }
 
 /* Retrieve a requested resource from the cache
@@ -10,6 +11,17 @@ async function handleFetch(request) {
   const c = await caches.open(CACHE);
   const cachedCopy = await c.match(request);
   return cachedCopy || Promise.reject(new Error('no-match'));
+}
+
+/* Invoke the default fetch capability to
+ * pull a resource over the network and use
+ * that to update the cache.
+ */
+async function updateCache(request) {
+  const c = await caches.open(CACHE);
+  const response = await fetch(request);
+  console.log('Updating cache ', request.url);
+  return c.put(request, response);
 }
 
 const CACHE = 'hsww';
