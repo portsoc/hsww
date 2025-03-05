@@ -10,7 +10,7 @@ https://portsoc.github.io/hsww/
 * `style.css` is a short css file that changes the colour of the heading.
 * `script.js` is a simple client JS script that writes to the console on page load.
 
-## Stage 2: Add a favicon
+## Stage 2: Add a favicon ([see the diff](https://github.com/portsoc/hsww/commit/stage-2))
 * `img/192.png` a 192x192 pixel png logo.
 * `index.html` links to logo as shortcut icon and an `apple-touch-icon` (used for bookmarks).
 
