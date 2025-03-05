@@ -1,7 +1,12 @@
-/* Log fetch requests and then process them as normal */
+/* Log fetch requests and then serve them from the cache */
 async function interceptFetch(evt) {
-  console.log(evt.request.method, evt.request.url);
-  return await fetch(evt.request);
+  const c = await caches.open(CACHE);
+  const cachedCopy = await c.match(evt.request);
+  if (cachedCopy) {
+    const fn = evt.request.url.split('/').pop();
+    console.log(`Serving ${fn} from cache.`);
+  }
+  return cachedCopy || Promise.reject(new Error('no-match'));
 }
 
 const CACHE = 'hsww';
