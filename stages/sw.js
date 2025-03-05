@@ -33,6 +33,7 @@ const CACHEABLE = [
   './style.css',
   './message.txt',
   './img/192.png',
+  './manifest.json',
 ];
 
 /* Prepare and populate a cache. */
