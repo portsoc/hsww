@@ -1,1 +1,0 @@
-Hello Service Worker World
